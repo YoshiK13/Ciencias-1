@@ -1,6 +1,12 @@
 # Hacer un programa que convierta una expresion matematica en notación infija a notación posfija 
 # y luego evalúe el resultado.
 
+# Por:
+# Davidson Esfleider Sanchez Gordillo - 20231020183
+# Diego Felipe Diaz Roa - 20201020147
+# Dania Lizeth Guzmán Triviño - 20221020061
+# Joshoa Alarcon Sanchez - 20221020013
+
 # Convertir expresion infija a posfija
 def infija_posfija(expresion):
 	operadores = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
