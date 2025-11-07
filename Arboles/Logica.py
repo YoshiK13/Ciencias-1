@@ -56,11 +56,11 @@ class NodoBinario(Nodo):
     
         return nodos_encontrados
 
-    # Funcion nesesaria para eliminar nodos con dos hijos, busca el minimo en el subarbol derecho
-    def encontrar_minimo(self):
+    # Funcion nesesaria para eliminar nodos con dos hijos, busca el maximo en el subarbol izquierdo
+    def encontrar_maximo_izq(self):
         nodo_actual = self
-        while nodo_actual.hijos[0] is not None:
-            nodo_actual = nodo_actual.hijos[0]
+        while nodo_actual.hijos[1] is not None:
+            nodo_actual = nodo_actual.hijos[1]
 
         return nodo_actual
 
@@ -104,8 +104,8 @@ class NodoBinario(Nodo):
 
         # Caso 3: Nodo con dos hijos
         else:
-            # Encontrar el minimo en el subarbol derecho
-            sucesor = nodo_eliminar.hijos[1].encontrar_minimo()
+            # Encontrar el maximo en el subarbol izquierdo
+            sucesor = nodo_eliminar.hijos[0].encontrar_maximo_izq()
             valor_sucesor = sucesor.valor
             self.eliminar_nodo(sucesor.valor)
             nodo_eliminar.valor = valor_sucesor

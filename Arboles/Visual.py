@@ -58,7 +58,7 @@ class App:
                 print(f"Raiz eliminada")
             
             else:
-                sucesor = self.raiz.hijos[1].encontrar_minimo()
+                sucesor = self.raiz.hijos[0].encontrar_maximo_izq()
                 valor_sucesor = sucesor.valor
                 self.raiz.eliminar_nodo(valor_sucesor)
                 self.raiz.valor = valor_sucesor
